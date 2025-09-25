@@ -1,8 +1,19 @@
+import MenuLinks from "../components/MenuLinks"
+
 function Home() {
-  return (
-    <div>
-      <h2>Home Page</h2>
-    </div>
+  return ( 
+    <section className="home-container container">
+      <div className="home-content" >
+        <h1 className="home-title">
+          <span>Welcome to the</span>
+          <span>Fronted Quiz!</span>
+        </h1>
+        <p>Pick a subject to get started.</p>
+      </div>
+      <div className="home-nav-list">
+        <MenuLinks></MenuLinks>
+      </div>
+    </section>
   )
 }
 
