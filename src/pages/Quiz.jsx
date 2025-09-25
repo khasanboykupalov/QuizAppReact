@@ -1,4 +1,5 @@
  function Quiz() {
+// console.log(error)
   return (
     <div>
       <h2>Quiz Page</h2>
