@@ -4,14 +4,17 @@ import {useFetch} from "../hooks/useFetch"
 
 function MenuLinks() {
 
-      const { data:quizzes, isPending, error } = useFetch('https://json-api.uz/api/project/quiz-app-react/quizzes')
+      // const { data:quizzes, isPending, error } = useFetch('https://json-api.uz/api/project/quiz-app-react/quizzes')
+
+     const { data:quizzes, isPending, error } = useFetch('http://localhost:3000/quizzes')
+
   return (
     <div>
       {isPending && <p>Loading...</p>} 
       {error && <p>{error}</p>}
 
       <div className="menu-list">
-          { quizzes && quizzes.data.map((item) =>{
+          { quizzes && quizzes.map((item) =>{
 
             return (
               <Link to={`/quiz/${item.title}`} key={item.title} className="menu-item header-logo">
